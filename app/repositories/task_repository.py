@@ -5,8 +5,8 @@ class TaskRepository:
     def __init__(self):
         self._tasks = {}
 
-    def save(self, title: str) -> Task:
-        task = Task(id=uuid4(), title=title)
+    def save(self, title: str, priority: str = "medium") -> Task:
+        task = Task(id=uuid4(), title=title, priority=priority)
         self._tasks[task.id] = task
         return task
 

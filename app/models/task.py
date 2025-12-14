@@ -5,4 +5,5 @@ from uuid import UUID, uuid4
 class Task:
     id: UUID
     title: str
+    priority: str
     completed: bool = False
