@@ -12,3 +12,7 @@ def create_task(title: str):
 @router.get("/")
 def list_tasks():
     return service.list_tasks()
+
+@router.post("/{task_id}/complete")
+def complete_task(task_id: str):
+    return service.complete_task(task_id)

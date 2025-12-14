@@ -9,3 +9,8 @@ class TaskService:
 
     def list_tasks(self):
         return self.repository.list()
+    
+    def complete_task(self, task_id):
+        task = self.repository._tasks[task_id]
+        task.completed = True
+        return task
